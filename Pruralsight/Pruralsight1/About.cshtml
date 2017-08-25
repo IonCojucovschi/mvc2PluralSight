@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+    <h2>Your app description page.</h2>
+</hgroup>
+
+<article>
+   <form method="post" action="">   @*add a new from where introduced a new imput  with name userdata and postaction*@
+       <input type="text" name="UserData"/>
+       <input type="submit" name="postActin" value="Posta data..."/>
+   </form>
+    <span class="message-success">
+        @if (IsPost)
+        { <text>@Request.Form["UserData"]</text>}  @*se verifica daca sa ffacut o postare noua si daca da atunci aceasta se va afisa cu ajutotul lui css*@
+    </span>
+</article>
+
+<aside>
+    <h3>Aside Title</h3>
+    <p>
+        Use this area to provide additional information.
+    </p>
+    @{ int i = 1;
+        while (i < 10)
+        {
+            i++;
+            <b>@i  </b><br>
+        }
+
+
+    }
+
+
+
+
+    <ul>
+        <li><a href="~/">Home</a></li>
+        <li><a href="~/About">About</a></li>
+        <li><a href="~/Contact">Contact</a></li>
+    </ul>
+</aside>
