@@ -1,0 +1,47 @@
+﻿body {
+    background-color:aliceblue;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#colorvar1 {
+    z-index: -1;
+    position:absolute;
+    border: solid medium black;
+    border-radius: 20px;
+    font-size: 20pt;
+    width: 100px;
+    height: 100px;
+    animation-name: varColor;
+    background-color: blue;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+
+
+@-webkit-keyframes varColor {
+    0% {        background-color: red;        left: 0px;        top: 0px;    }
+
+    25% {        background-color: yellow;        left: 200px;        top: 0px;    }
+
+    50% {        background-color: blue;        left: 200px;        top: 200px;    }
+
+    75% {        background-color: green;        left: 0px;        top: 200px;    }
+
+    100% {        background-color: red;        left: 0px;        top: 0px;    }
+}   
+
+
